@@ -1,0 +1,31 @@
+<body>
+    <div id="nav-bar">
+        <nav>
+            <div class="grid-item"><a routerLink="/home" id="a1">PhotoHub</a></div>
+            <div class="grid-item2"><a routerLink="/personalArea">Personal Area</a></div>
+            <div class="grid-item3"><a routerLink="/favorites" id="a3">Favorites</a></div>
+            <div class="grid-item4"><button (click)="logout()">Log out</button></div>
+        </nav>
+        <p>Your favorite pictures</p>
+    </div>
+    <div class="out-container" *ngIf="mapPhoto_Like?.size > 0">
+
+        <div class="photo-container" *ngFor="let entry of mapPhoto_Like | keyvalue">
+            <button class="photo" (click)="redirect(entry.key)" (mouseenter)="hoverPhoto($event)" (mouseleave)="resetPhoto($event)">
+                <img (click)="redirect(entry.key)" src={{entry.key.img}} alt={{entry.key.title}}>
+            </button>
+            <div class="border">
+                <button class="heart" *ngIf="entry.value; then thenBlock else elseBlock"></button>
+                <ng-template #thenBlock><button class="heart active click" (click)="select($event, entry.key)" (mouseenter)="hover($event,entry.key)" (mouseleave)="reset($event, entry.key)">{{entry.key.likes}}&nbsp;&#9829;</button></ng-template>
+                <ng-template #elseBlock><button class="heart" (click)="select($event, entry.key)" (mouseenter)="hover($event, entry.key)" (mouseleave)="reset($event, entry.key)">{{entry.key.likes}}&nbsp;&#9825;</button></ng-template>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="out-container" *ngIf="mapPhoto_Like?.size == 0">
+        <div class="no-favorites-container">
+            <p>You do not have any favorite photos yet!</p>
+        </div>
+    </div>
+</body>

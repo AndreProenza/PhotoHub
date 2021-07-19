@@ -1,0 +1,407 @@
+* {
+    text-align: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+}
+
+body {
+    background: url('../../assets/img/registerBlur.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-panel {
+    background: url('../../assets/img/register.jpg') no-repeat center center fixed;
+    background-size: 80% 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 73%;
+    height: 85%;
+    position: relative;
+    border-radius: 2%;
+}
+
+#login-panel-inside {
+    width: 35%;
+}
+
+.bar-name {
+    font-size: 50px;
+    border: solid white 5px;
+    height: 100px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.2);
+}
+
+
+div > #p1 {
+    margin-top: 45px;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+div > #p2 {
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+a {
+    margin: auto;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+a:hover {
+    color: rgb(14, 156, 144);
+    transition: 0.6s;
+}
+
+input[type=text],input[type=password], input[type=email], select, textarea {
+    border-radius: 10px;
+    border: solid rgb(60, 176, 180) 2px;
+    color: grey;
+    font-size: 20px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 5px;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+    background-color: rgb(227, 240, 241);
+    outline: none;
+}
+
+
+input[type=submit] {
+    background-color: rgb(60, 176, 180);
+    border-radius: 20px;
+    margin-top:3px;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-color: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    color:rgb(14, 89, 92);
+    background-color: rgb(146, 216, 202);
+    transition: 0.6s;
+} 
+
+#password-requirements > p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 11px;
+    text-align: left;
+    padding: 2px;
+    white-space: nowrap;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+
+.user-button {
+    width: auto;
+    white-space: nowrap;
+    text-align: center;
+    background-color: rgb(60, 176, 180);
+    border-radius: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+#password-requirements {
+    margin-top: 15px;
+    width: 43%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.invalid{
+    color: rgb(27, 26, 26);
+    background-color: rgb(60, 176, 180);
+    border-radius: 5%;
+}
+
+.valid {
+    visibility: "hidden";
+    color: transparent;
+}
+
+.incorrect{
+    color: rgb(255, 144, 144);
+    background-color: rgba(27, 26, 26, 0.6);
+}
+.popup {
+    position: relative;
+    width: 30%;
+    height: 3.5%;
+  }
+  
+  /* The actual popup */
+  .popuptext {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    background-color: #555;
+    border-radius: 6px;
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    height: 100%;
+    font-style: normal;
+    font-size: 17.5px;
+    opacity: 0;
+  }
+  
+  /* Popup arrow */
+  .popuptext::after {
+    content: "";
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .show {
+    visibility: visible;
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -ms-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+  }
+  /* The Modal (background) */
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 20%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  /* Modal Content */
+#modal-content {
+    background-color: rgb(14, 89, 92);
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    width: 35%;
+    height: 12%;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px #fff;
+    opacity: 0.8;
+}
+  
+@media (max-height: 640px) and (max-width: 320px){
+    .bar-name {
+        margin-top: 20px;
+        margin-left: -65px;
+        width: 200px;
+        height: 65px;
+        font-size: 25px;
+        border: solid white 3px
+    }
+
+    div > #p1 {
+        margin-top: 25px;
+        margin-bottom: 0;
+        white-space: nowrap;
+        margin-left: -60px;
+        font-size: 13px;
+    }
+    
+    div > #p2 {
+        margin-top: 0;
+        font-size: 18px;
+        margin-bottom: 30px;
+        margin-left: -50px;
+        margin-right: -50px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    form {
+        margin-top: -10px;
+        margin-left: -60px;
+        
+    }
+
+    input[type=text], input[type=password], select, textarea {
+        font-size: 16px;
+    }
+
+    input[type=submit] {
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    a{
+        white-space: nowrap;
+        font-size: 14px;
+        margin-left: -30px;
+    }
+
+    #password-requirements > p {
+        margin-left: -87px;
+        margin-right: -87px;
+    }
+
+    .invalid{
+        background-color: rgb(60, 176, 180);
+    }
+
+    #modal{
+        width: 200%;
+        margin-left: -160px;
+    }
+
+    #modal-content{
+        margin-top: 200px;
+        padding-bottom: 135px;
+
+    }
+}
+
+@media (max-height: 896px) and (max-width: 414px){
+
+    .bar-name {
+        margin-top: 0px;
+        margin-left: -48px;
+        width: 200px;
+        height: 65px;
+        font-size: 25px;
+        border: solid white 3px
+    }
+    
+    div > #p1 {
+        margin-top: 25px;
+        margin-bottom: 0;
+        white-space: nowrap;
+        margin-left: -48px;
+        font-size: 13px;
+    }
+        
+    div > #p2 {
+        margin-top: 0;
+        font-size: 18px;
+        margin-bottom: 30px;
+        margin-left: -48px;
+        margin-right: -50px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    form {
+        margin-top: -10px;
+        margin-left: -48px;
+        
+    }
+
+    input[type=text], input[type=password], select, textarea {
+        font-size: 16px;
+    }
+
+    input[type=submit] {
+        margin-left: 25px;
+        font-size: 16px;
+    }
+
+    a{
+        white-space: nowrap;
+        font-size: 14px;
+        margin-left: -17px;
+    }
+
+    #password-requirements > p {
+        margin-left: -87px;
+        margin-right: -87px;
+    }
+
+    .invalid{
+        background-color: rgb(60, 176, 180);
+    }
+
+    #modal{
+        width: 200%;
+        height: 70%;
+        margin-left: -50%;
+    }
+
+    #modal-content{
+        margin-top: 200px;
+        padding-bottom: 135px;
+
+    }
+
+    #login-panel {
+        background: url('../../assets/img/register.jpg') no-repeat center center fixed;
+        background-size: 217% 96%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 76%;
+        height: 85%;
+        position: relative;
+        border-radius: 31px;
+    }
+
+    a{
+        white-space: nowrap;
+        font-size: 19px;
+        margin-left: -35px;
+        color: darkslategrey;
+    }
+
+    input[type=submit] {
+        margin-left: 25px;
+        font-size: 16px;
+        margin-bottom: 3%;
+    }
+}

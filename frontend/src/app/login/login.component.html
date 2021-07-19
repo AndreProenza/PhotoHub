@@ -1,0 +1,24 @@
+<body>
+    <div id="login-panel">
+        <div id="login-panel-inside">
+            <div class="bar-name">PhotoHub</div>
+            <p id="p1">Share moments and experiences</p>
+            <form> 
+                <input type="text" id="username" placeholder="Username" required 
+                [(ngModel)]="user.username"  [ngModelOptions]="{standalone: true}"><br>
+                <input type="password" id="password" placeholder="Password" required
+                [(ngModel)]="user.password"  [ngModelOptions]="{standalone: true}"><br>
+                <!-- key up para qdo carregar no enter fazer login-->
+                <input class="user-button" type="submit" value="Log in" (click) ="login()" (key.up)="login()">
+                <div id="modal">
+
+                    <div id="modal-content">    
+                      <p id="error"></p>
+                      <button class="user-button" id="confirmar" >OK</button>
+                    </div>
+                </div> 
+            </form> 
+            <a routerLink="/register">Create an account</a>
+        </div>
+    </div>
+</body>

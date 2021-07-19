@@ -1,0 +1,91 @@
+<body>
+    <div id="nav-bar">
+        <nav>
+            <div class="grid-item"><a routerLink="/home" id="a1">PhotoHub</a></div>
+            <div class="grid-item2"><a routerLink="/personalArea">Personal Area</a></div>
+            <div class="grid-item3"><a routerLink="/favorites" id="a3">Favorites</a></div>
+            <div class="grid-item4"><button (click)="logout()" (focus)="unhoverSortMenu()">Log out</button></div>
+        </nav>
+        <p id="home-title">Recent Photos</p>
+        <div class="dropdown" id="dropdown-id">
+            <button class="dropbtn" (focus)="hoverSortMenu()">Sort Photos By</button>
+            <div class="dropdown-content" id="dropdown-content-id">
+                <button class="dropdownContent" (click)="sortByDate()">Date</button>
+                <button class="dropdownContent" (click)="sortByLikes()">Likes</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal">
+        <div id="modal-content">
+          <p id="error"></p>
+          <button class="user-button" id="confirmar">OK</button>
+        </div>
+    </div>
+    <div class="out-container" (focus)="unhoverSortMenu()" *ngIf="photos?.length > 0">
+        <div class="photo-container" *ngFor="let entry of mapPhoto_Like | keyvalue; let i = index; let l = last;">
+            <button class="photo" (click)="redirect(entry.key)" (mouseenter)="hoverPhoto($event)" (mouseleave)="resetPhoto($event)" (focus)="unhoverSortMenu()">
+                <img (click)="redirect(entry.key)" src={{entry.key.img}} alt={{entry.key.title}}>
+            </button>
+            <div class="border">
+                <button class="heart" *ngIf="entry.value; then thenBlock else elseBlock"></button>
+                <ng-template #thenBlock><button class="heart active" (click)="select($event, entry.key)" (mouseenter)="hover($event, entry.key)" (mouseleave)="reset($event, entry.key)">{{entry.key.likes}}&nbsp;&#9829;</button></ng-template>
+                <ng-template #elseBlock><button class="heart" (click)="select($event, entry.key)" (mouseenter)="hover($event, entry.key)" (mouseleave)="reset($event, entry.key)">{{entry.key.likes}}&nbsp;&#9825;</button></ng-template>
+            </div>
+            {{ l === true ? removeExtra(): null}}
+        </div>
+    </div>
+
+    <div class="out-container" *ngIf="photos?.length == 0">
+        <div class="no-photos-container">
+            <p>There are no photos in the system yet!</p>
+        </div>
+        <!-- <div class="photo-container">
+            <div class="photo">
+                <img (click)="redirect()" src="../../assets/img/photo2.jpg" alt="">
+            </div>
+            <div class="border">
+              <button class="heart" (click)="select($event)" (mouseenter)="hover($event)" (mouseleave)="reset($event)">&#9825;</button>
+            </div>
+        </div>
+        <div class="photo-container">
+            <div class="photo">
+                <img (click)="redirect()" src="../../assets/img/photo3.jpg" alt="">
+            </div>
+            <div class="border">
+              <button class="heart" (click)="select($event)" (mouseenter)="hover($event)" (mouseleave)="reset($event)">&#9825;</button>
+            </div>
+        </div>
+        <div class="photo-container">
+            <div class="photo">
+                <img (click)="redirect()" src="../../assets/img/photo1.jpg" alt="">
+            </div>
+            <div class="border">
+              <button class="heart" (click)="select($event)" (mouseenter)="hover($event)" (mouseleave)="reset($event)">&#9825;</button>
+            </div>
+        </div>
+        <div class="photo-container">
+            <div class="photo">
+                <img (click)="redirect()" src="../../assets/img/photo4.jpg" alt="">
+            </div>
+            <div class="border">
+              <button class="heart" (click)="select($event)" (mouseenter)="hover($event)" (mouseleave)="reset($event)">&#9825;</button>
+            </div>
+        </div>
+        <div class="photo-container">
+            <div class="photo">
+                <img (click)="redirect()" src="../../assets/img/photo5.jpg" alt="">
+            </div>
+            <div class="border">
+              <button class="heart" (click)="select($event)" (mouseenter)="hover($event)" (mouseleave)="reset($event)">&#9825;</button>
+            </div>
+        </div>
+        <div class="photo-container">
+            <div class="photo">
+                <img (click)="redirect()" src="../../assets/img/photo6.jpg" alt="">
+            </div>
+            <div class="border">
+              <button class="heart" (click)="select($event)" (mouseenter)="hover($event)" (mouseleave)="reset($event)">&#9825;</button>
+            </div>
+        </div> -->
+    </div>
+</body>

@@ -1,0 +1,273 @@
+* {
+    text-align: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+}
+
+body {
+    background: url('../../assets/img/loginBlur.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-panel {
+    background: url('../../assets/img/login.jpg') no-repeat center center fixed;
+    background-size: 80% 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 73%;
+    height: 85%;
+    position: relative;
+    border-radius: 2%;
+}
+
+#login-panel-inside {
+    margin-top: 30px;
+    width: 35%;
+}
+
+.user-button {
+    width: auto;
+    white-space: nowrap;
+    text-align: center;
+    background-color: rgb(60, 176, 180);
+    border-radius: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bar-name {
+    font-size: 50px;
+    border: solid white 5px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.2);
+}
+
+div > #p1 {
+    margin-top: 5px;
+    margin-bottom: 60px;
+}
+
+
+a {
+    margin: auto;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+a:hover {
+    color: rgb(83, 223, 204);
+    transition: 0.6s;
+}
+
+
+input[type=text], input[type=password], select, textarea {
+    border-radius: 10px;
+    border: solid rgb(60, 176, 180) 2px;
+    color: grey;
+    font-size: 20px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: rgb(227, 240, 241);
+    outline: none;
+  }
+  
+
+input[type=text] {
+    margin-bottom: 5px;
+}
+
+input[type=password] {
+    margin-bottom: 10px;
+}
+
+
+input[type=submit] {
+    background-color: rgb(60, 176, 180);
+    border-radius: 20px;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-color: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+input[type=submit]:hover {
+    color:rgb(14, 89, 92);
+    background-color: rgb(146, 216, 202);
+    transition: 0.6s;
+}
+ /* The Modal (background) */
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 20%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+  
+  /* Modal Content */
+#modal-content {
+    background-color: rgb(14, 89, 92);
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    width: 20%;
+    height: 10%;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px #fff;
+    opacity: 0.8;
+}
+
+@media (max-height: 640px) and (max-width: 320px){
+    .bar-name {
+        margin-top: 20px;
+        margin-left: -63px;
+        width: 200px;
+        height: 65px;
+        font-size: 25px;
+        border: solid white 3px;
+    }
+
+    div > #p1 {
+        font-size: 15px;
+        white-space: nowrap;
+        margin-top: 10px;
+        margin-left: -58px;
+        margin-bottom: 90px;
+    }
+
+    form {
+        margin-top: 50px;
+        margin-left: -60px;
+        
+    }
+
+    input[type=text], input[type=password], select, textarea {
+        font-size: 16px;
+    }
+
+    input[type=password] {
+        margin-bottom: 40px;
+    }
+
+    input[type=submit] {
+        margin-top: 30px;
+        margin-left: 25px;
+        font-size: 16px;
+    }
+
+    a{
+        white-space: nowrap;
+        margin-left: -13px;
+        font-size: 14px;
+    }
+
+    #modal{
+        width: 200%;
+        margin-left: -160px;
+    }
+
+    #modal-content{
+        margin-top: 200px;
+    }
+}
+
+@media (max-height: 896px) and (max-width: 414px){
+    .bar-name {
+        margin-top: 20px;
+        margin-left: -48px;
+        width: 200px;
+        height: 65px;
+        font-size: 25px;
+        border: solid white 3px;
+    }
+
+    div > #p1 {
+        font-size: 15px;
+        white-space: nowrap;
+        margin-top: 10px;
+        margin-left: -42px;
+        margin-bottom: 90px;
+    }
+
+    form {
+        margin-top: 50px;
+        margin-left: -48px;
+        
+    }
+
+    input[type=text], input[type=password], select, textarea {
+        font-size: 16px;
+    }
+
+    input[type=password] {
+        margin-bottom: 40px;
+    }
+
+    input[type=submit] {
+        margin-top: 30px;
+        margin-left: 25px;
+        font-size: 16px;
+    }
+
+    a{
+        white-space: nowrap;
+        margin-left: -8px;
+    font-size: 16px;
+    }
+
+    #modal{
+        width: 200%;
+        height: 120%;
+        margin-left: -50%;
+    }
+
+    #modal-content{
+        margin-top: 30%;
+    }
+
+    #login-panel{
+        background-size: 202% 85%;
+    }
+
+    
+    
+
+}

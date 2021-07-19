@@ -1,0 +1,46 @@
+<body>
+    <div id="nav-bar">
+        <nav>
+            <div class="grid-item"><a routerLink="/home" id="a1">PhotoHub</a></div>
+            <div class="grid-item2"><a routerLink="/personalArea">Personal Area</a></div>
+            <div class="grid-item3"><a routerLink="/favorites" id="a3">Favorites</a></div>
+            <div class="grid-item4"><button (click)="logout()">Log out</button></div>
+        </nav>
+        <p id="title">Photo Details</p>
+    </div>
+
+    <div class="out-container" *ngIf="photo">
+        <div class="inside-container">
+            <div class="user-panel">
+                <p class="photo-by">Photographed By</p>
+                <img id="user-photo" *ngIf="imgPhotografer; then thenBlock1 else elseBlock1">
+                <ng-template #thenBlock1><img id="user-photo" src="{{imgPhotografer}}"></ng-template>
+                <ng-template #elseBlock1><img id="user-photo" src="../../assets/img/default-profile-picture.jpg" style="opacity: 0.6;"></ng-template>
+                <p class="username">{{username}}</p>
+                <p class="user-description" *ngIf="description; then thenBlock2 else elseBlock2"></p>
+                <ng-template #thenBlock2><p class="user-description">{{description}}</p></ng-template>
+                <ng-template #elseBlock2><p class="user-description">This User has no description</p></ng-template>
+            </div>
+
+            <div class="photo-panel">
+                <div class="buttons-panel">
+                    <button class="btn" id="copyLink" (click)="copyToClipBoard()">&#10064;</button>
+                    <button class="btn" id="favoriteButton" (click)="favoritePhoto()" (mouseenter)="hoverFavorite($event)" (mouseleave)="resetFavorite($event)">&#9733;</button>
+                    <button class="btn" id="likeButton" (click)="likePhoto()" (mouseenter)="hoverLike($event)" (mouseleave)="resetLike($event)">&#9829;</button>
+                    <span id="likes">{{photo.likes}} likes <span class="heart">&hearts;</span></span>
+                    <div class="popup">
+                        <span class="popuptext" id="myPopup"></span>
+                    </div>
+                </div>
+
+                <img id="photo-posted" src={{photo.img}}>
+                <!-- <p class="photo-title">{{photo.title}}</p> -->
+                <textarea readonly class="textarea" id="photo-title">{{photo.title}}</textarea>
+                <p class="photo-description" *ngIf="photo.description; then thenBlock else elseBlock"></p>
+                <ng-template #thenBlock><textarea readonly class="textarea" id="photo-description">{{photo.description}}</textarea></ng-template>
+                <ng-template #elseBlock><textarea readonly class="textarea" id="photo-description">The photo {{photo.title}} has no description!</textarea></ng-template>
+            </div>
+
+        </div>
+    </div>
+</body>

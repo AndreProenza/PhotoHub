@@ -1,0 +1,33 @@
+<body>
+    <div id="login-panel">
+        <div id="login-panel-inside">
+            <div class="bar-name">PhotoHub</div>
+            <p id="p1">Dive through the world of photography</p>
+            <p id="p2">share memories and experiences with the community</p>
+            <form>
+                <!-- action="/register" method="POST" -->
+                <input pattern="[A-Za-z0-9]{3,}" type="text" id="username" placeholder="Username" required
+                (focus) = "displayRequirements()" (blur) ="hideRequirements()" 
+                title="Username must contain 3 or more characters, containing only letters and/or numbers"
+                [(ngModel)]="user.username"  [ngModelOptions]="{standalone: true}"><br>
+                <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="password" placeholder="Password" required 
+                (focus) = "displayRequirements()" (blur) ="hideRequirements()" 
+                [(ngModel)]="user.password"  [ngModelOptions]="{standalone: true}"> <br>                
+                <input class="user-button" (click)="verificarTudo()" type="submit" value="Register">
+                <div id="modal">
+                    <div id="modal-content">    
+                      <p id="error"></p>
+                      <button class="user-button" id="confirmar" >OK</button>
+                    </div>
+                </div>
+            </form> 
+            <a routerLink="/login">Already have an account</a>
+            <div id = "password-requirements">  
+                <p id="size" class = "invalid">Password must contain 8 or more characters</p>
+                <p id ="capital" class = "invalid">Password must contain at least a capital letter</p>
+                <p id ="small" class = "invalid">Password must contain at least a small letter</p>
+                <p id="number" class = "invalid">Password must contain at least a number</p>   
+            </div>    
+        </div>
+    </div>
+</body>

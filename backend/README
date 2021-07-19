@@ -1,0 +1,6 @@
+To install modules and run backend:
+
+- npm i 
+- npm i express-validator
+- npm i cors
+- npm i  jsonwebtoken

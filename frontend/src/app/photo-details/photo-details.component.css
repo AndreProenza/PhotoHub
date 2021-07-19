@@ -1,0 +1,542 @@
+* {
+    text-align: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+}
+
+body {
+    background: url('../../assets/img/photoDetailsBlur.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+}
+
+
+p {
+    color: rgb(80, 124, 128);
+    font-size: 25px;
+    margin-bottom: 1%;
+}
+
+
+#nav-bar {
+    margin-top: 2%;
+    margin-left: 15.5%;
+    margin-right: 15.5%;
+    height: 20%;
+}
+
+nav {
+    height: 70px;
+    border-radius: 1%;
+    display: grid;
+    grid-template-columns: 55% 20% 10% 10%;
+    background-image: linear-gradient(to bottom right, rgba(14, 89, 92, 0.8), rgba(83, 223, 204, 0.2));
+}
+
+
+.grid-item, .grid-item2, .grid-item3, .grid-item4 {
+    display: flex;
+    align-items: center;
+}
+
+.grid-item {
+    justify-content: center;
+}
+
+.grid-item2 {
+    justify-content: flex-end;
+}
+
+.grid-item3 {
+    justify-content: center;
+}
+
+.grid-item4 {
+    justify-content: flex-end;
+}
+
+.grid-item4 > button {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgb(60, 176, 180);
+    border-color: transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 84%;
+}
+
+.grid-item4 > button:hover {
+    color:rgb(14, 89, 92);
+    background-color: rgb(146, 216, 202);
+    transition: 0.6s;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(27, 92, 98);
+    transition: 0.6s;
+}
+
+#a1 {
+    position: absolute;
+    left: 22%;
+    font-size: 40px;
+}
+
+#a3 {
+    margin-left: 15%;
+}
+
+.out-container {
+    display: flex;
+    align-items: center;
+    height: 76%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inside-container {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+
+.user-panel {
+    width: 35%;
+    height: 100%;
+}
+
+#user-photo {
+    width: 47%;
+    height: 29%;
+    object-fit: cover;
+    border-radius: 100%;
+    box-shadow: 0 0 2px 2px #fff;
+    margin-bottom: 10px;
+    margin-top: 3%;
+}
+
+.username {
+    color: white;
+    background-color: rgba(119, 108, 103, 0.3);
+    border-radius: 10%;
+    font-size: 23px;
+    padding: 5px 15px 5px 15px;
+    width: 50%;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0.4%;
+}
+
+.photo-by {
+    color: white;
+    background-color: rgba(119, 108, 103, 0.3);
+    width: 40%;
+    border-radius: 5%;
+    margin: auto;
+    font-size: 23px;
+    padding: 1.4%;
+}
+
+.user-description {
+    max-height: 37%;
+    font-size: 18px;
+    margin: auto;
+    width: 50%;
+    border-radius: 5%;
+    background-color: rgba(119, 108, 103, 0.3);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.photo-panel {
+    width: 65%;
+    height: 100%;
+    margin-top: 0;
+}
+
+#photo-posted {
+    width: 99%;
+    height: 67.5%;
+    border: white solid 3px;
+}
+
+.textarea {
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    outline: none;
+    background-color: rgba(119, 108, 103, 0.3);
+}
+
+#photo-title {
+    width: 99%;
+    height: 3%;
+}
+
+#photo-description {
+    width: 99%;
+    height: 14%;
+}
+
+.photo-description {
+    background-color: rgba(119, 108, 103, 0.3);
+    color: white;
+    padding: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 20%;
+    font-size: 18px;
+    margin-top: 0;
+    border-radius: 2%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.buttons-panel {
+    text-align: left;
+    width: 100%;
+    height: 4%;
+}
+
+.buttons-panel > button {
+    text-align: left;
+    background-color: rgba(47, 131, 118, 0.2);
+    color: rgb(25, 71, 64);
+    border-color: transparent;
+    border: white solid 1px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttons-panel > button:hover {
+    background-color: rgba(33, 59, 55, 0.2);
+    color: white;
+}
+
+.btn {
+    font-size: 20px;
+    width: 3.75%;
+    height: 100%;
+    line-height: 10px;
+    text-align: center;
+    font-style: normal;
+}
+
+#favoriteButton:hover {
+    color: rgba(255, 213, 77, 0.918);
+}
+
+#likeButton {
+    text-align: center;
+}
+
+#likeButton:hover {
+    color: red;
+}
+
+.heart {
+    font-style: normal;
+    color: red;
+    font-size: 25px;
+}
+
+#likes {
+    padding-left: 1%;
+    padding-right: 1%;
+    color: rgb(25, 71, 64);
+    margin: 1%;
+    border-radius: 3%;
+}
+
+.photo-title {
+    background-color: rgba(119, 108, 103, 0.3);
+    color: white;
+    font-size: 18px;
+    border-radius: 3%;
+    margin: 0;
+    margin-bottom: 0.5%;
+}
+
+.popup {
+    position: relative;
+    width: 50%;
+    height: 7%;
+  }
+
+/* The actual popup */
+.popuptext {
+  position: absolute;
+  background-color: #555;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  visibility: visible;
+  border-radius: 6px;
+  font-style:normal;
+  font-size: 17.5px;
+  opacity: 0;
+  border: solid #555 0.5px;
+  top: -59.5px;
+  left: -7.75%;
+  padding: 2px 5px 2px 5px;
+}
+
+/* Popup arrow */
+.popuptext::after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 45px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+@media (max-height: 640px) and (max-width: 320px){
+    #nav-bar {
+      height: 10%;
+    }
+
+    #nav-bar > p {
+      color: rgb(80, 124, 128);
+      font-size: 25px;
+    }
+
+    #nav-bar > nav {
+      height: 70px;
+      width: 135%;
+      margin-left: -40px;
+      border-radius: 1%;
+      display: grid;
+      grid-template-columns: 55% 20% 10% 10%;
+      background-image: linear-gradient(to bottom right, rgba(14, 89, 92, 0.8), rgba(83, 223, 204, 0.2));
+    }
+
+    #a1{
+      font-size: 20px;
+      margin-left: -50px;
+    }
+
+    a{
+      font-size: 11px;
+      margin-left: -150px;
+      margin-right: 40px;
+    }
+
+    .grid-item4 > button {
+        width: 90px;
+        font-size: 10px;
+        margin-right: -10px;
+        margin-left: -8px;
+    }
+
+    .user-description{
+        width: 190%;
+        font-size: 70%;
+        margin-left: 80%;
+        margin-top: -170%;
+        max-height: 20%;
+    }
+
+    #user-photo{
+        width: 120%;
+        height: 20%;
+        margin-left: -75%;
+        margin-top: 20%;
+    }
+
+    .photo-by{
+        width: 125%;
+        margin-left: -50%;
+        font-size: 90%;
+        margin-top: 40%;
+    }
+
+    #photo-posted{
+        margin-top: 200%;
+        width: 230%;
+        margin-left: -100%;
+    }
+
+    .photo-description{
+        width: 200%;
+        margin-left: -90%;
+    }
+
+    .buttons-panel{
+        margin-top: 230%;
+        margin-bottom: -200%;
+        margin-left: -100%;
+    }
+
+    p{
+        margin-top: 0%;
+    }
+}
+
+/* Media for MAC 1440 x 900 */
+@media (max-height: 900px) and (max-width: 1440px){
+
+    #user-photo {
+        object-fit: cover;
+        border-radius: 100%;
+        box-shadow: 0 0 2px 2px #fff;
+        margin-bottom: 10px;
+        margin-top: 3%;
+        border: white solid 2px;
+        width: 190px;
+        height: 180px;
+        margin-top: 50px;
+    }
+
+    .photo-by {
+        color: white;
+        background-color: rgba(119, 108, 103, 0.3);
+        width: 50%;
+        border-radius: 3%;
+        margin: auto;
+        font-size: 23px;
+    }
+}
+
+@media (max-height: 896px) and (max-width: 414px){
+    #nav-bar {
+        height: 10%;
+      }
+
+      #nav-bar > p {
+        color: rgb(80, 124, 128);
+        font-size: 25px;
+      }
+
+      #nav-bar > nav {
+        height: 70px;
+        width: 135%;
+        margin-left: -50px;
+        border-radius: 1%;
+        display: grid;
+        grid-template-columns: 55% 20% 10% 10%;
+        background-image: linear-gradient(to bottom right, rgba(14, 89, 92, 0.8), rgba(83, 223, 204, 0.2));
+      }
+
+      #a1{
+        font-size: 20px;
+        margin-left: -50px;
+      }
+
+      a{
+        font-size: 15px;
+        margin-left: -150px;
+        margin-right: 50px;
+      }
+
+      .grid-item4 > button {
+          width: 90px;
+          font-size: 14px;
+          margin-right: -10px;
+          margin-left: -8px;
+      }
+
+      .username{
+        margin-left: 155%;
+        margin-top: -139%;
+        margin-bottom: 165%;
+        width: 100%;
+      }
+      
+      .user-description{
+          width: 190%;
+          font-size: 70%;
+          margin-left: 110%;
+          margin-top: -160%;
+          max-height: 20%;
+      }
+
+      #user-photo{
+          width: 120%;
+          height: 20%;
+          margin-left: -75%;
+          margin-top: 20%;
+      }
+
+      .photo-by{
+        width: 145%;
+        margin-left: -50%;
+        font-size: 100%;
+        margin-top: 40%;
+        white-space: nowrap;
+      }
+
+      #photo-posted{
+          margin-top: 200%;
+          width: 200%;
+          height: 40%;
+          margin-left: -78%;
+      }
+
+      .photo-description{
+          width: 200%;
+          height: 10%;
+          margin-left: -90%;
+      }
+
+      .buttons-panel{
+          margin-top: 170%;
+          margin-bottom: -200%;
+          margin-left: -70%;
+          width: 430%;
+      }
+
+
+
+      p{
+          margin-top: 0%;
+      }
+
+      .textarea{
+          margin-left: -79%;
+          margin-top: 0%;
+          padding-left: 50%;
+          padding-right: 50%;
+          text-align: center;
+      }
+
+      .btn{
+        background-color: rgba(110, 173, 162, 0.527);
+      }
+
+      #photo-description {
+        width: 103%;
+        height: 11%;
+    }
+
+    #photo-title{
+        width: 103%;
+        height: 5%;
+    }
+
+}
