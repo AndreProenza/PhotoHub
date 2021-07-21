@@ -25,15 +25,23 @@ Angular, CSS, HTML, JavaScript, Mongo DB, Node JS, Mongoose, TypeScript
 Execute Node (BackEnd) Port: 3080
 - Directory backend/
 - Open terminal and type these two instructions:  
-     npm i  
+     ```code
+     npm i
+     ```
+     ```code
      DEBUG=backend:* npm run devstart
+     ```
      
 
 Execute Angular (FrontEnd) Port: 3030
 - Directory frontend/
 - Open terminal and type these two instructions:  
-      npm i  
-      ng serve -o
+     ```code
+     npm i
+     ```
+     ```code
+     ng serve -o
+     ```
       
 ---  
 
