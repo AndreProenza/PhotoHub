@@ -1,6 +1,5 @@
-# About PhotoHub 
+# PhotoHub 
 
-## Context
 PhotoHub is a photos application that allows a user to register and log in, upload one, or several photos simultaneously. Allows a user to like and dislike, bookmark and delete a photo.
 When uploading, is possible to write a title and description to detail a photo.
 It is also possible to filter photos by date and likes.
@@ -11,37 +10,59 @@ The goal was to fulfill the requirements outlined by the product owner and, in t
 ---
 
 ## Main Activities
-Plan project,  manage people, design website, scrum master, scrum methodology, development using the MEAN stack
+
+- Plan project
+- Manage people
+- Design website
+- Scrum master
+- Scrum methodology
+- Development using MEAN stack
 
 ---
 
 ## Technologies
-Angular, CSS, HTML, JavaScript, Mongo DB, Node JS, Mongoose, TypeScript
+
+- Angular
+- CSS
+- HTML
+- JavaScript
+- Mongo DB
+- Node JS
+- Mongoose
+- TypeScript
 
 ---
 
-# Instructions to Execute
+## Instructions to Execute
 
-Execute Node (BackEnd) Port: 3080
-- Directory backend/
-- Open terminal and type these two instructions:  
-     ```code
-     npm i
-     ```
-     ```code
-     DEBUG=backend:* npm run devstart
-     ```
+Execute Node JS:
+
+(BackEnd) Port: 3080
+
+Go to `backend/` directory, open a terminal and type:  
+```code
+npm i
+```
+```code
+DEBUG=backend:* npm run devstart
+```
      
+Execute Angular 
 
-Execute Angular (FrontEnd) Port: 3030
-- Directory frontend/
-- Open terminal and type these two instructions:  
-     ```code
-     npm i
-     ```
-     ```code
-     ng serve -o
-     ```
-      
----  
+(FrontEnd) Port: 3030
 
+Go to `frontend/` directory, open a terminal and type: 
+
+```code
+npm i
+```
+
+```code
+ng serve -o
+```
+---
+
+## Requirements
+
+- Node JS
+- Angular
