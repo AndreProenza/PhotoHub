@@ -66,3 +66,8 @@ ng serve -o
 
 - Node JS
 - Angular
+
+## Device 
+
+- Computer
+- Mobile Phone (iphone 11)
