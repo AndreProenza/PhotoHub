@@ -7,6 +7,8 @@ It is also possible to filter photos by date and likes.
 The application was built using the scrum methodology in 2 weeks. (Jira was used to plan tasks).
 The goal was to fulfill the requirements outlined by the product owner and, in the end, wait for the product to be accepted or not.
 
+https://user-images.githubusercontent.com/78174997/144132605-82648888-4f29-4c8b-bba0-9cd1cb9feb38.mp4
+
 ---
 
 ## Main Activities
