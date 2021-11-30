@@ -67,6 +67,8 @@ ng serve -o
 - Node JS
 - Angular
 
+---
+
 ## Device 
 
 - Computer
