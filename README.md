@@ -80,6 +80,6 @@ ng serve -o
 
 * **André Proença** - [GitHub](https://github.com/AndreProenza)
 * **Manuel Sokolov** - [GitHub](https://github.com/ManuelSokolov)
-* **João Cotralha** - [GitHub](#)
-* **Nuno Fontes** - [GitHub](#)
-* **Diogo Lanças** - [GitHub](#)
+* **João Cotralha** - [GitHub](https://github.com/joaocotralha)
+* **Nuno Fontes** - [GitHub](https://github.com/NunoFontess)
+* **Diogo Lança** - [GitHub](https://github.com/DiogoLanc)
