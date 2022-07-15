@@ -11,7 +11,7 @@ https://user-images.githubusercontent.com/78174997/144132605-82648888-4f29-4c8b-
 
 ---
 
-## Main Activities
+## Project Goals
 
 - Plan project
 - Manage people
@@ -22,16 +22,10 @@ https://user-images.githubusercontent.com/78174997/144132605-82648888-4f29-4c8b-
 
 ---
 
-## Technologies
+## Requirements
 
-- Angular
-- CSS
-- HTML
-- JavaScript
-- Mongo DB
-- Node JS
-- Mongoose
-- TypeScript
+- [Node.js](https://nodejs.org/en/) - JavaScript runtime built on Chrome's V8 JavaScript engine;
+- [Angular](https://angular.io/) - Platform for building mobile and desktop web applications;
 
 ---
 
@@ -64,14 +58,28 @@ ng serve -o
 ```
 ---
 
-## Requirements
-
-- Node JS
-- Angular
-
----
-
 ## Device 
 
 - Computer
 - Mobile Phone (iphone 11)
+
+---
+
+## Used Technologies
+
+* [Angular](https://angular.io/) - Platform for building mobile and desktop web applications;
+* [Node.js](https://nodejs.org/en/) - JavaScript runtime built on Chrome's V8 JavaScript engine;
+* [Mongo DB](https://www.mongodb.com/) - Cloud-Native Database;
+* [Mongoose](https://mongoosejs.com/) - Object Data Modeling (ODM) library for MongoDB and Node.js.;
+* [JavaScript](https://www.javascript.com/) - Programming Language;
+* [TypeScript](https://www.typescriptlang.org/) - Programming Language;
+
+---
+
+## Authors
+
+* **André Proença** - [GitHub](https://github.com/AndreProenza)
+* **Manuel Sokolov** - [GitHub](https://github.com/ManuelSokolov)
+* **João Cotralha** - [GitHub](#)
+* **Nuno Fontes** - [GitHub](#)
+* **Diogo Lanças** - [GitHub](#)
